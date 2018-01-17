@@ -24,13 +24,14 @@
         <td th:text="${doctor.clinic}"></td>
         <td th:text="${doctor.description}"></td>
         <!--<td th:text="${cheese.category.name}"></td>-->
-        <td> <a th:href="@{'edit/' + ${doctor.id}}"> Edit </a></td>
+        <td> <a th:href="@{'doctor/edit/' + ${doctor.id}}"> Edit </a><a th:href="@{'doctor/view/' + ${doctor.id}}">| View</a>
+        </td>
 
     </tr>
 
 </table>
 
-<a href="/add">Add Doctor</a> | <a href="/remove">Remove</a>
+<a href="doctor/add">Add Doctor</a> | <a href="doctor/remove">Remove</a>
 
 
 
