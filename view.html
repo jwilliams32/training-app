@@ -25,8 +25,43 @@
         <td>Work Up:</td>
         <td th:text="*{instruction}"></td>
     </tr>
+
 </table>
 
+<H5>Tests</H5>
+
+<!--<ul th:each="test : ${tests}
+th:unless="${tests.size()}"-->
+<ul th:each="test : ${tests}">
+    <a th:href="'../../test/view/' + ${test.id}">
+    <li th:text="${test.name}"></li>
+    </a>
+</ul>
+<!--<table class="table">-->
+    <!--<tr th:each="test : ${tests}">-->
+
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>Test:</td>-->
+        <!--<td th:text="${test.name}"></td>-->
+    <!--</tr>-->
+
+<!--</table>-->
+<p th:unless="${tests.size()}"><i>No tests yet</i></p>
+
+<!--<p><a th:href="'/doctor/add-test/' + ${doctorId}">Add Test</a></p>-->
+<!--<p><a th:href="'/doctor/add-item<p><a th:href="'/doctor/add-test/' + ${doctorId}">Add Test</a></p>-->
+<p><a th:href="'/doctor/add-test/' + ${doctorId}">Add Test</a></p>
+
+
+
+
+<!--<select>-->
+    <!--<option value="volvo">Volvo</option>-->
+    <!--<option value="saab">Saab</option>-->
+    <!--<option value="opel">Opel</option>-->
+    <!--<option value="audi">Audi</option>-->
+<!--</select>-->
 
 <!--<table class="table">-->
     <!--<tr th:each="doctor : ${doctors}">-->
